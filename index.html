@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nothing Much</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .mainContainer {
+            height: 100vh;
+            width: 100vw;
+            background-image: url('MrBean.webp');
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            letter-spacing: 5px;
+            position: relative;
+        }
+
+        .mainContainer .textElement {
+            margin-left: 50%;
+            z-index: 99;
+            color: white;
+        }
+
+        .mainContainer .backgrounMask {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            opacity: 0.5;
+            z-index: 10;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="backgrounMask"></div>
+        <h1 class="textElement" style="font-size: 60px;">Launching Soon</h1>
+        <h3 class="textElement" style="font-size: 30px;">By Kunal & Aditya</h3>
+        
+        <h6 class="textElement" style="font-size: 50px; margin-top: 10%;" id="SecondsCountDown"></h6>
+        <h6 class="textElement" style="font-size: 25px; margin-bottom: 10%;">Seconds to go.......</h6>
+    </div>
+
+    <script>
+        var countDownDate = new Date("Jan 22, 2029 12:00:00").getTime();
+
+        var countDownInterval = setInterval(function() {
+            var now = new Date().getTime();
+
+            var difference = countDownDate - now;
+
+            document.getElementById('SecondsCountDown').innerText = Math.floor(difference / 100)
+
+        }, 50)
+    </script>
+</body>
+</html>
