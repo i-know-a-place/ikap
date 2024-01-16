@@ -15,9 +15,6 @@
         .mainContainer {
             height: 100vh;
             width: 100vw;
-            background-image: url('MrBean.webp');
-            background-repeat: no-repeat;
-            background-size: cover;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -43,17 +40,168 @@
             z-index: 10;
         }
 
+        .mainContainer .backgroundImg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .mainContainer .backgroundImg img{
+            width: 100%;
+        }
+
+        #headingFirstLine {
+            font-size: 60px;
+        }
+
+        #headingSecondLine {
+            font-size: 30px;
+        }
+
+        #SecondsCountDown {
+            font-size: 50px;
+            margin-top: 10%;
+        }
+
+        #secondsText {
+            font-size: 25px;
+            margin-bottom: 10%;
+        }
+
+        @media screen and (max-width: 2600px) {
+
+            #headingFirstLine {
+                font-size: 120px;
+            }
+
+            #headingSecondLine {
+                font-size: 60px;
+            }
+
+            #SecondsCountDown {
+                font-size: 100px;
+                margin-top: 5%;
+            }
+
+            #secondsText {
+                font-size: 50px;
+            }
+        }
+
+        @media screen and (max-width: 1500px) {
+
+            #headingFirstLine {
+                font-size: 60px;
+                margin-top: 5%;
+            }
+
+            #headingSecondLine {
+                font-size: 30px;
+            }
+
+            #SecondsCountDown {
+                font-size: 50px;
+                margin-top: 10%;
+            }
+
+            #secondsText {
+                font-size: 25px;
+            }
+        }
+
+        @media screen and (max-width: 1100px) {
+
+            #headingFirstLine {
+                font-size: 40px;
+            }
+
+            #headingSecondLine {
+                font-size: 20px;
+            }
+
+            #SecondsCountDown {
+                font-size: 35px;
+                margin-top: 15%;
+            }
+
+            #secondsText {
+                font-size: 15px;
+                margin-bottom: 20%;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+
+            .mainContainer .backgroundImg img{
+                width: auto;
+            }
+
+            .mainContainer .textElement {
+                margin-left: 0;
+            }
+
+            #headingFirstLine {
+                font-size: 60px;
+                margin-top: 20%;
+            }
+
+            #headingSecondLine {
+                font-size: 30px;
+            }
+
+            #SecondsCountDown {
+                font-size: 50px;
+            }
+
+            #secondsText {
+                font-size: 25px;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+
+            .mainContainer .backgroundImg img{
+                width: auto;
+                position: absolute;
+                left: -45%;
+            }
+
+            #headingFirstLine {
+                font-size: 40px;
+            }
+
+            #headingSecondLine {
+                font-size: 20px;
+            }
+
+            #SecondsCountDown {
+                font-size: 35px;
+                margin-top: 35%;
+            }
+
+            #secondsText {
+                font-size: 17px;
+            }
+
+        }
+
     </style>
 
 </head>
 <body>
-    <div class="mainContainer">
+    <div class="mainContainer">        
+        <div class="backgroundImg">
+            <img src="MrBean.webp" alt="">
+        </div>
         <div class="backgrounMask"></div>
-        <h1 class="textElement" style="font-size: 60px;">Launching Soon</h1>
-        <h3 class="textElement" style="font-size: 30px;">By Kunal & Aditya</h3>
+        <h1 class="textElement" id="headingFirstLine">Launching Soon</h1>
+        <h3 class="textElement" id="headingSecondLine">By Kunal & Aditya</h3>
         
-        <h6 class="textElement" style="font-size: 50px; margin-top: 10%;" id="SecondsCountDown"></h6>
-        <h6 class="textElement" style="font-size: 25px; margin-bottom: 10%;">Seconds to go.......</h6>
+        <h6 class="textElement" id="SecondsCountDown"></h6>
+        <h6 class="textElement" id="secondsText">Seconds to go.......</h6>
     </div>
 
     <script>
